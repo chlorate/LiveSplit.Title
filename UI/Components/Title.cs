@@ -72,8 +72,8 @@ namespace LiveSplit.UI.Components
             float startPadding, titleEndPadding, categoryEndPadding;
             CalculatePadding(height, mode, showGameIcon, out startPadding, out titleEndPadding, out categoryEndPadding);
 
-            DrawGameName(g, state, width, height, showGameIcon, startPadding, titleEndPadding);
-            DrawCategoryName(g, state, width, height, showGameIcon, startPadding, categoryEndPadding);
+            DrawGameName(g, state, width, height, showGameIcon, startPadding, titleEndPadding, mode);
+            DrawCategoryName(g, state, width, height, showGameIcon, startPadding, categoryEndPadding, mode);
         }
 
         private void DrawBackground(Graphics g, float width, float height)
@@ -117,7 +117,7 @@ namespace LiveSplit.UI.Components
             }
         }
 
-        private void DrawCategoryName(Graphics g, LiveSplitState state, float width, float height, bool showGameIcon, float startPadding, float categoryEndPadding)
+        private void DrawCategoryName(Graphics g, LiveSplitState state, float width, float height, bool showGameIcon, float startPadding, float categoryEndPadding, LayoutMode mode)
         {
             if (Settings.TextAlignment == AlignmentType.Center || (Settings.TextAlignment == AlignmentType.Auto && !showGameIcon))
             {
@@ -132,6 +132,12 @@ namespace LiveSplit.UI.Components
                 CategoryNameLabel.X = startPadding;
                 CategoryNameLabel.Width = width - startPadding - categoryEndPadding;
             }
+
+            if (mode == LayoutMode.Horizontal)
+            {
+                CategoryNameLabel.Width = CategoryNameLabel.ActualWidth;
+            }
+
             CategoryNameLabel.Y = 0;
             CategoryNameLabel.HorizontalAlignment = StringAlignment.Near;
             CategoryNameLabel.VerticalAlignment = string.IsNullOrEmpty(GameNameLabel.Text) ? StringAlignment.Center : StringAlignment.Far;
@@ -163,7 +169,7 @@ namespace LiveSplit.UI.Components
             }
         }
 
-        private void DrawGameName(Graphics g, LiveSplitState state, float width, float height, bool showGameIcon, float startPadding, float titleEndPadding)
+        private void DrawGameName(Graphics g, LiveSplitState state, float width, float height, bool showGameIcon, float startPadding, float titleEndPadding, LayoutMode mode)
         {
             if (Settings.TextAlignment == AlignmentType.Center || (Settings.TextAlignment == AlignmentType.Auto && !showGameIcon))
             {
@@ -177,6 +183,11 @@ namespace LiveSplit.UI.Components
             {
                 GameNameLabel.X = startPadding;
                 GameNameLabel.Width = width - startPadding - titleEndPadding;
+            }
+
+            if (mode == LayoutMode.Horizontal)
+            {
+                GameNameLabel.Width = GameNameLabel.ActualWidth;
             }
 
             GameNameLabel.HorizontalAlignment = StringAlignment.Near;
