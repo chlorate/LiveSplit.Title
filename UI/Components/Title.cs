@@ -59,8 +59,9 @@ namespace LiveSplit.UI.Components
             else
                 TitleFont = state.LayoutSettings.TextFont;
 
-            MinimumHeight = g.MeasureString("A", TitleFont).Height * 1.7f;
-            VerticalHeight = g.MeasureString("A", TitleFont).Height * 1.7f;
+            MinimumHeight = g.MeasureString("A", TitleFont).Height;
+            VerticalHeight = MinimumHeight * Settings.TitleHeight;
+
             var showGameIcon = state.Run.GameIcon != null && Settings.DisplayGameIcon;
             if (showGameIcon)
             {
@@ -388,6 +389,7 @@ namespace LiveSplit.UI.Components
             Cache["CategoryNameLabel"] = CategoryNameLabel.Text;
             Cache["AttemptCountLabel"] = AttemptCountLabel.Text;
             Cache["TextAlignment"] = Settings.TextAlignment;
+            Cache["Height"] = Settings.TitleHeight;
 
             if (invalidator != null && (Cache.HasChanged || FrameCount > 1))
             {

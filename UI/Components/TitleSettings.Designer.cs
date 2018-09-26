@@ -57,6 +57,8 @@
             this.chkSingleLine = new System.Windows.Forms.CheckBox();
             this.label2 = new System.Windows.Forms.Label();
             this.cmbTextAlignment = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.trkHeight = new System.Windows.Forms.TrackBar();
             this.tableLayoutPanel1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
@@ -64,6 +66,7 @@
             this.tableLayoutPanel2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.trkHeight)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -84,23 +87,26 @@
             this.tableLayoutPanel1.Controls.Add(this.chkAttemptCount, 3, 4);
             this.tableLayoutPanel1.Controls.Add(this.chkFinishedRuns, 0, 4);
             this.tableLayoutPanel1.Controls.Add(this.chkDisplayGameIcon, 0, 5);
-            this.tableLayoutPanel1.Controls.Add(this.groupBox3, 0, 7);
+            this.tableLayoutPanel1.Controls.Add(this.groupBox3, 0, 8);
             this.tableLayoutPanel1.Controls.Add(this.chkSingleLine, 3, 5);
             this.tableLayoutPanel1.Controls.Add(this.label2, 0, 6);
             this.tableLayoutPanel1.Controls.Add(this.cmbTextAlignment, 1, 6);
+            this.tableLayoutPanel1.Controls.Add(this.label4, 0, 7);
+            this.tableLayoutPanel1.Controls.Add(this.trkHeight, 1, 7);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(7, 7);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 8;
+            this.tableLayoutPanel1.RowCount = 9;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 29F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 82F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 82F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 29F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 29F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 29F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 34F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 29F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 29F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(462, 393);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(462, 422);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // chkCategoryName
@@ -363,9 +369,9 @@
             this.tableLayoutPanel1.SetColumnSpan(this.groupBox3, 4);
             this.groupBox3.Controls.Add(this.tableLayoutPanel4);
             this.groupBox3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox3.Location = new System.Drawing.Point(3, 317);
+            this.groupBox3.Location = new System.Drawing.Point(3, 341);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(456, 73);
+            this.groupBox3.Size = new System.Drawing.Size(456, 78);
             this.groupBox3.TabIndex = 41;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Additional Category Info";
@@ -384,7 +390,7 @@
             this.tableLayoutPanel4.RowCount = 2;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 29F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 29F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(450, 54);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(450, 59);
             this.tableLayoutPanel4.TabIndex = 0;
             // 
             // chkVariables
@@ -439,7 +445,7 @@
             // 
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(3, 290);
+            this.label2.Location = new System.Drawing.Point(3, 288);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(145, 13);
             this.label2.TabIndex = 44;
@@ -455,11 +461,35 @@
             "Automatic (Based on Icon)",
             "Left",
             "Center"});
-            this.cmbTextAlignment.Location = new System.Drawing.Point(154, 286);
+            this.cmbTextAlignment.Location = new System.Drawing.Point(154, 284);
             this.cmbTextAlignment.Name = "cmbTextAlignment";
             this.cmbTextAlignment.Size = new System.Drawing.Size(305, 21);
             this.cmbTextAlignment.TabIndex = 45;
             this.cmbTextAlignment.SelectedIndexChanged += new System.EventHandler(this.cmbTextAlignment_SelectedIndexChanged);
+            // 
+            // label4
+            // 
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(3, 317);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(145, 13);
+            this.label4.TabIndex = 46;
+            this.label4.Text = "Height:";
+            // 
+            // trkHeight
+            // 
+            this.trkHeight.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel1.SetColumnSpan(this.trkHeight, 3);
+            this.trkHeight.LargeChange = 10;
+            this.trkHeight.Location = new System.Drawing.Point(154, 312);
+            this.trkHeight.Maximum = 300;
+            this.trkHeight.Minimum = 100;
+            this.trkHeight.Name = "trkHeight";
+            this.trkHeight.Size = new System.Drawing.Size(305, 23);
+            this.trkHeight.TabIndex = 47;
+            this.trkHeight.TickStyle = System.Windows.Forms.TickStyle.None;
+            this.trkHeight.Value = 170;
             // 
             // TitleSettings
             // 
@@ -468,7 +498,7 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "TitleSettings";
             this.Padding = new System.Windows.Forms.Padding(7);
-            this.Size = new System.Drawing.Size(476, 407);
+            this.Size = new System.Drawing.Size(476, 436);
             this.Load += new System.EventHandler(this.TitleSettings_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
@@ -481,6 +511,7 @@
             this.groupBox3.ResumeLayout(false);
             this.tableLayoutPanel4.ResumeLayout(false);
             this.tableLayoutPanel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.trkHeight)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -516,5 +547,7 @@
         private System.Windows.Forms.CheckBox chkGameName;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox cmbTextAlignment;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TrackBar trkHeight;
     }
 }

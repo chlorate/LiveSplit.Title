@@ -16,6 +16,9 @@ namespace LiveSplit.UI.Components
         public bool SingleLine { get; set; }
         public bool DisplayGameIcon { get; set; }
 
+        public float TitleHeight { get; set; }
+        public float ScaledTitleHeight { get { return TitleHeight * 100f; } set { TitleHeight = value / 100f; } }
+
         public bool ShowRegion { get; set; }
         public bool ShowPlatform { get; set; }
         public bool ShowVariables { get; set; }
@@ -50,6 +53,7 @@ namespace LiveSplit.UI.Components
             TitleColor = Color.FromArgb(255, 255, 255, 255);
             OverrideTitleColor = false;
             SingleLine = false;
+            TitleHeight = 1.7f;
             ShowRegion = false;
             ShowPlatform = false;
             ShowVariables = true;
@@ -71,6 +75,7 @@ namespace LiveSplit.UI.Components
             btnColor2.DataBindings.Add("BackColor", this, "BackgroundColor2", false, DataSourceUpdateMode.OnPropertyChanged);
             chkDisplayGameIcon.DataBindings.Add("Checked", this, "DisplayGameIcon", false, DataSourceUpdateMode.OnPropertyChanged);
             cmbGradientType.DataBindings.Add("SelectedItem", this, "GradientString", false, DataSourceUpdateMode.OnPropertyChanged);
+            trkHeight.DataBindings.Add("Value", this, "ScaledTitleHeight", false, DataSourceUpdateMode.OnPropertyChanged);
             chkRegion.DataBindings.Add("Checked", this, "ShowRegion", false, DataSourceUpdateMode.OnPropertyChanged);
             chkPlatform.DataBindings.Add("Checked", this, "ShowPlatform", false, DataSourceUpdateMode.OnPropertyChanged);
             chkVariables.DataBindings.Add("Checked", this, "ShowVariables", false, DataSourceUpdateMode.OnPropertyChanged);
@@ -149,6 +154,7 @@ namespace LiveSplit.UI.Components
             GradientString = SettingsHelper.ParseString(element["BackgroundGradient"], GradientType.Vertical.ToString());
             ShowFinishedRunsCount = SettingsHelper.ParseBool(element["ShowFinishedRunsCount"], false);
             SingleLine = SettingsHelper.ParseBool(element["SingleLine"], false);
+            TitleHeight = SettingsHelper.ParseFloat(element["Height"], 1.7f);
             ShowRegion = SettingsHelper.ParseBool(element["ShowRegion"], false);
             ShowPlatform = SettingsHelper.ParseBool(element["ShowPlatform"], false);
             ShowVariables = SettingsHelper.ParseBool(element["ShowVariables"], true);
@@ -179,6 +185,7 @@ namespace LiveSplit.UI.Components
             SettingsHelper.CreateSetting(document, parent, "BackgroundColor2", BackgroundColor2) ^
             SettingsHelper.CreateSetting(document, parent, "BackgroundGradient", BackgroundGradient) ^
             SettingsHelper.CreateSetting(document, parent, "DisplayGameIcon", DisplayGameIcon) ^
+            SettingsHelper.CreateSetting(document, parent, "Height", TitleHeight) ^
             SettingsHelper.CreateSetting(document, parent, "ShowRegion", ShowRegion) ^
             SettingsHelper.CreateSetting(document, parent, "ShowPlatform", ShowPlatform) ^
             SettingsHelper.CreateSetting(document, parent, "ShowVariables", ShowVariables) ^
