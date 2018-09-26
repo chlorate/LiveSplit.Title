@@ -277,6 +277,7 @@ namespace LiveSplit.UI.Components
 
         public Control GetSettingsControl(LayoutMode mode)
         {
+            Settings.Mode = mode;
             return Settings;
         }
 

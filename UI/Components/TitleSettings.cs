@@ -40,6 +40,8 @@ namespace LiveSplit.UI.Components
             set { BackgroundGradient = (GradientType)Enum.Parse(typeof(GradientType), value); }
         }
 
+        public LayoutMode Mode { get; set; }
+
         public TitleSettings()
         {
             InitializeComponent();
@@ -86,6 +88,7 @@ namespace LiveSplit.UI.Components
             chkColor_CheckedChanged(null, null);
             chkFont_CheckedChanged(null, null);
             cmbTextAlignment.SelectedIndex = (int)TextAlignment;
+            trkHeight.Enabled = Mode == LayoutMode.Vertical;
         }
 
         void chkColor_CheckedChanged(object sender, EventArgs e)
