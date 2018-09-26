@@ -117,7 +117,7 @@
             this.chkCategoryName.Margin = new System.Windows.Forms.Padding(7, 3, 3, 3);
             this.chkCategoryName.Name = "chkCategoryName";
             this.chkCategoryName.Size = new System.Drawing.Size(243, 17);
-            this.chkCategoryName.TabIndex = 43;
+            this.chkCategoryName.TabIndex = 8;
             this.chkCategoryName.Text = "Show Category Name";
             this.chkCategoryName.UseVisualStyleBackColor = true;
             // 
@@ -130,7 +130,7 @@
             this.chkGameName.Margin = new System.Windows.Forms.Padding(7, 3, 3, 3);
             this.chkGameName.Name = "chkGameName";
             this.chkGameName.Size = new System.Drawing.Size(199, 17);
-            this.chkGameName.TabIndex = 42;
+            this.chkGameName.TabIndex = 7;
             this.chkGameName.Text = "Show Game Name";
             this.chkGameName.UseVisualStyleBackColor = true;
             // 
@@ -173,7 +173,7 @@
             this.chkColor.Margin = new System.Windows.Forms.Padding(7, 3, 3, 3);
             this.chkColor.Name = "chkColor";
             this.chkColor.Size = new System.Drawing.Size(440, 17);
-            this.chkColor.TabIndex = 0;
+            this.chkColor.TabIndex = 5;
             this.chkColor.Text = "Override Layout Settings";
             this.chkColor.UseVisualStyleBackColor = true;
             this.chkColor.CheckedChanged += new System.EventHandler(this.chkColor_CheckedChanged);
@@ -186,7 +186,7 @@
             this.btnColor.Location = new System.Drawing.Point(148, 32);
             this.btnColor.Name = "btnColor";
             this.btnColor.Size = new System.Drawing.Size(23, 23);
-            this.btnColor.TabIndex = 1;
+            this.btnColor.TabIndex = 6;
             this.btnColor.UseVisualStyleBackColor = false;
             this.btnColor.Click += new System.EventHandler(this.ColorButtonClick);
             // 
@@ -247,7 +247,7 @@
             this.btnFont.Location = new System.Drawing.Point(372, 32);
             this.btnFont.Name = "btnFont";
             this.btnFont.Size = new System.Drawing.Size(75, 23);
-            this.btnFont.TabIndex = 1;
+            this.btnFont.TabIndex = 4;
             this.btnFont.Text = "Choose...";
             this.btnFont.UseVisualStyleBackColor = true;
             this.btnFont.Click += new System.EventHandler(this.btnFont_Click);
@@ -261,7 +261,7 @@
             this.chkFont.Margin = new System.Windows.Forms.Padding(7, 3, 3, 3);
             this.chkFont.Name = "chkFont";
             this.chkFont.Size = new System.Drawing.Size(359, 17);
-            this.chkFont.TabIndex = 0;
+            this.chkFont.TabIndex = 3;
             this.chkFont.Text = "Override Layout Settings";
             this.chkFont.UseVisualStyleBackColor = true;
             this.chkFont.CheckedChanged += new System.EventHandler(this.chkFont_CheckedChanged);
@@ -335,7 +335,7 @@
             this.chkAttemptCount.Margin = new System.Windows.Forms.Padding(7, 3, 3, 3);
             this.chkAttemptCount.Name = "chkAttemptCount";
             this.chkAttemptCount.Size = new System.Drawing.Size(243, 17);
-            this.chkAttemptCount.TabIndex = 6;
+            this.chkAttemptCount.TabIndex = 10;
             this.chkAttemptCount.Text = "Show Attempt Count";
             this.chkAttemptCount.UseVisualStyleBackColor = true;
             // 
@@ -348,7 +348,7 @@
             this.chkFinishedRuns.Margin = new System.Windows.Forms.Padding(7, 3, 3, 3);
             this.chkFinishedRuns.Name = "chkFinishedRuns";
             this.chkFinishedRuns.Size = new System.Drawing.Size(199, 17);
-            this.chkFinishedRuns.TabIndex = 5;
+            this.chkFinishedRuns.TabIndex = 9;
             this.chkFinishedRuns.Text = "Show Finished Runs Count";
             this.chkFinishedRuns.UseVisualStyleBackColor = true;
             // 
@@ -360,7 +360,7 @@
             this.chkDisplayGameIcon.Margin = new System.Windows.Forms.Padding(7, 3, 3, 3);
             this.chkDisplayGameIcon.Name = "chkDisplayGameIcon";
             this.chkDisplayGameIcon.Size = new System.Drawing.Size(141, 17);
-            this.chkDisplayGameIcon.TabIndex = 7;
+            this.chkDisplayGameIcon.TabIndex = 11;
             this.chkDisplayGameIcon.Text = "Display Game Icon";
             this.chkDisplayGameIcon.UseVisualStyleBackColor = true;
             // 
@@ -401,7 +401,7 @@
             this.chkVariables.Margin = new System.Windows.Forms.Padding(7, 3, 3, 3);
             this.chkVariables.Name = "chkVariables";
             this.chkVariables.Size = new System.Drawing.Size(193, 17);
-            this.chkVariables.TabIndex = 2;
+            this.chkVariables.TabIndex = 17;
             this.chkVariables.Text = "Show Variables";
             this.chkVariables.UseVisualStyleBackColor = true;
             // 
@@ -413,7 +413,7 @@
             this.chkPlatform.Margin = new System.Windows.Forms.Padding(7, 3, 3, 3);
             this.chkPlatform.Name = "chkPlatform";
             this.chkPlatform.Size = new System.Drawing.Size(237, 17);
-            this.chkPlatform.TabIndex = 1;
+            this.chkPlatform.TabIndex = 16;
             this.chkPlatform.Text = "Show Platform";
             this.chkPlatform.UseVisualStyleBackColor = true;
             // 
@@ -425,7 +425,7 @@
             this.chkRegion.Margin = new System.Windows.Forms.Padding(7, 3, 3, 3);
             this.chkRegion.Name = "chkRegion";
             this.chkRegion.Size = new System.Drawing.Size(193, 17);
-            this.chkRegion.TabIndex = 0;
+            this.chkRegion.TabIndex = 15;
             this.chkRegion.Text = "Show Region";
             this.chkRegion.UseVisualStyleBackColor = true;
             // 
@@ -437,7 +437,7 @@
             this.chkSingleLine.Margin = new System.Windows.Forms.Padding(7, 3, 3, 3);
             this.chkSingleLine.Name = "chkSingleLine";
             this.chkSingleLine.Size = new System.Drawing.Size(243, 17);
-            this.chkSingleLine.TabIndex = 40;
+            this.chkSingleLine.TabIndex = 12;
             this.chkSingleLine.Text = "Display Game and Category in Single Line";
             this.chkSingleLine.UseVisualStyleBackColor = true;
             // 
@@ -464,7 +464,7 @@
             this.cmbTextAlignment.Location = new System.Drawing.Point(154, 284);
             this.cmbTextAlignment.Name = "cmbTextAlignment";
             this.cmbTextAlignment.Size = new System.Drawing.Size(305, 21);
-            this.cmbTextAlignment.TabIndex = 45;
+            this.cmbTextAlignment.TabIndex = 13;
             this.cmbTextAlignment.SelectedIndexChanged += new System.EventHandler(this.cmbTextAlignment_SelectedIndexChanged);
             // 
             // label4
@@ -487,7 +487,7 @@
             this.trkHeight.Minimum = 100;
             this.trkHeight.Name = "trkHeight";
             this.trkHeight.Size = new System.Drawing.Size(305, 23);
-            this.trkHeight.TabIndex = 47;
+            this.trkHeight.TabIndex = 14;
             this.trkHeight.TickStyle = System.Windows.Forms.TickStyle.None;
             this.trkHeight.Value = 170;
             // 
